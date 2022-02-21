@@ -50,7 +50,7 @@ form.addEventListener('submit', e => {
   if (!expReg.username.test(username.value) || !username.value.trim()) {
     errores.push({
       tipo: errorName,
-      msg: 'Formato no válido, solo letras!',
+      msg: 'Formato no válido, ingrese más de 4 caracteres y solo letras!',
       icon: excla[0],
       iconcheck: check[0],
     });
