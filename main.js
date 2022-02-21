@@ -87,6 +87,7 @@ form.addEventListener('submit', e => {
   }
 
   mostrarMensajeExito();
+  limpiarFormulario();
 });
 
 const mostrarMensajesError = errores => {
@@ -125,6 +126,14 @@ input.forEach(e => {
     }
   });
 });
+
+const limpiarFormulario = () => {
+  input.forEach(inp => {
+    inp.value = '';
+    inp.style.border = '2px solid #c4c4c4';
+  });
+  check.forEach(c => (c.style.opacity = '0'));
+};
 
 const mostrarMensajeExito = () => {
   mensajeExito.style.display = 'block';

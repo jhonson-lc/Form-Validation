@@ -12,11 +12,18 @@ body {
   background: #f2f2f2;
 }
 
+.principal {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
 .container {
   display: flex;
-  width: 50%;
-  height: 50rem;
-  margin: 10rem auto;
+  max-width: 60rem;
+  width: 100%;
   outline: 2px solid #f2796e;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
@@ -31,19 +38,24 @@ body {
   width: 50%;
   background: #f2796e;
   padding: 2rem;
+  position: relative;
 }
 
 .image {
   width: 100%;
-  height: 70%;
+  height: 100%;
   background-image: url(images/illustration.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 2rem 0;
 }
 
 .text {
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0.5rem;
+  position: absolute;
   color: #fff;
   text-align: center;
   font-size: 1.5rem;
@@ -51,11 +63,10 @@ body {
 }
 
 #form {
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  padding: 4rem 6rem;
   display: flex;
   flex-direction: column;
-  margin: 0 4rem;
   line-height: 2rem;
   justify-content: center;
   position: relative;
@@ -266,4 +277,38 @@ body {
 
 #mensajeExito span:hover {
   color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .logo img {
+    width: 15rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+    background: #f2796e;
+    position: relative;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .text {
+    position: relative;
+  }
+
+  #form {
+    max-width: 50rem;
+    width: 100%;
+    margin: auto;
+  }
 }
